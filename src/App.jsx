@@ -97,24 +97,15 @@ export default function App() {
           <source src="/video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-white text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-white text-4xl md:text-6xl font-bold">
             Hawaii’s #1 Local Business Directory
           </h1>
-          <input
-            type="text"
-            placeholder="Search for local businesses..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full max-w-xl px-4 py-3 rounded-md text-lg"
-          />
         </div>
       </section>
 
       {/* Popular Categories */}
       <section className="py-16 px-4 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-10">
-          Popular Categories
-        </h2>
+        <h2 className="text-3xl font-bold text-center mb-10">Popular Categories</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             "Restaurants",
@@ -141,9 +132,7 @@ export default function App() {
 
       {/* Business Listings */}
       <section className="py-16 px-4 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-10">
-          Featured Businesses
-        </h2>
+        <h2 className="text-3xl font-bold text-center mb-10">Featured Businesses</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedBusinesses.map((biz) => (
             <BusinessCard key={biz.id} business={biz} />
@@ -153,10 +142,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-10 text-center">
-        <p>
-          &copy; {new Date().getFullYear()} Hawaii Thrive Clone. All rights
-          reserved.
-        </p>
+        <p>&copy; {new Date().getFullYear()} Hawaii Thrive Clone. All rights reserved.</p>
       </footer>
     </div>
   );
